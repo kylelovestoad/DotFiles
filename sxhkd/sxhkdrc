@@ -15,8 +15,8 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # open firefox
-super + b
-        firefox
+super + {_,shift + }b
+        firefox {_, --private-window}
 
 # open steam/lutris
 super + {_,shift + }g
@@ -28,7 +28,11 @@ super + d
 
 # open godot engine
 super + e
-	godot
+	godot-mono
+
+# open gimp/aseprite
+super + {_,shift + }a
+	{gimp,aseprite}
 
 #
 # bspwm hotkeys
