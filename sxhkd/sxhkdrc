@@ -26,6 +26,14 @@ super + {_,shift + }g
 super + d
 	discord
 
+# open file manager
+super + {_,shift +}h
+	{kitty -e ranger,thunar}
+
+# open Jetbrains Rider
+super + r
+	rider
+
 # open godot engine
 super + e
 	godot-mono
@@ -33,6 +41,10 @@ super + e
 # open gimp/aseprite
 super + {_,shift + }a
 	{gimp,aseprite}
+
+# open pamac-manager
+super + p
+	pamac-manager
 
 #
 # bspwm hotkeys

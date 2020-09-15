@@ -22,4 +22,6 @@ bspc rule -a Screenkey manage=off
 
 wmname LG3D
 
+flameshot & optimus-manager-qt & 
+
 $HOME/.config/polybar/polylaunch.sh
