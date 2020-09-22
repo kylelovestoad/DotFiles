@@ -27,7 +27,7 @@ super + d
 	discord
 
 # open file manager
-super + {_,shift +}h
+super + {_,shift +}o
 	{kitty -e ranger,thunar}
 
 # open Jetbrains Rider
@@ -42,17 +42,35 @@ super + e
 super + {_,shift + }a
 	{gimp,aseprite}
 
-# open pamac-manager
-super + p
-	pamac-manager
+# open flameshot
+super + {_, shift +, ctrl +} s
+	flameshot {gui, full -c, full -p $HOME/Pictures}
+
+# open vim/libreoffice
+super + {_, shift +}v
+	{kitty -e vim, libreoffice}
+
+# set volume to 0
+# TODO try to toggle mute and unmute
+super + F1
+	pactl set-sink-volume @DEFAULT_SINK@ 0
+
+# volume up 5%
+super + F3
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# volume down 5%
+super + F2
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# logout/reboot/shutdown
+super + alt + {_, shift +, ctrl + }q
+	{killall bspwm,reboot,shutdown}
+	
 
 #
 # bspwm hotkeys
 #
-
-# quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit; kill polybar,wm -r}
 
 # close and kill
 {alt,super} + {_,shift + }F4
@@ -74,8 +92,11 @@ super + m
 # state/flags
 #
 
+super + {h,x,p,l}
+	bspc node -g {hidden, sticky, private, locked}
+
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,shift + t,shift + f,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 #
