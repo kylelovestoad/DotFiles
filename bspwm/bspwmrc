@@ -25,4 +25,4 @@ wmname LG3D
 
 $HOME/.config/polybar/polylaunch.sh
 
-flameshot & optimus-manager-qt & nm-applet &
+flameshot & optimus-manager-qt & nm-applet & blueman-applet &
