@@ -171,6 +171,11 @@ label-urgent-padding = 2
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+
 icon-prev = 
 icon-stop = 
 icon-play = 
@@ -261,10 +266,10 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = "%a %Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %I:%M %P
+time-alt = %I:%M:%S %P
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}

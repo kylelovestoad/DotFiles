@@ -31,8 +31,8 @@ super + {_,shift +}o
 	{kitty -e ranger,thunar}
 
 # open Jetbrains Rider
-super + r
-	rider
+super + {_, shift +}c
+	{rider, /opt/intellij-idea-ultimate-edition/bin/idea.sh}
 
 # open godot engine
 super + e
@@ -49,6 +49,14 @@ super + {_, shift +, ctrl +} s
 # open vim/libreoffice
 super + {_, shift +}v
 	{kitty -e vim, libreoffice}
+
+# open packettracer
+super + p
+	packettracer
+
+# open obs studio
+super + r
+	obs
 
 # set volume to 0
 # TODO try to toggle mute and unmute
