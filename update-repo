@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cp -rf $HOME/{.bashrc,.zshrc} $HOME/git-repos/DotFiles/shell
-cp -rf $HOME/.config/{bspwm,kitty,polybar,sxhkd,vis,'gtk-3.0'} $HOME/git-repos/DotFiles/  
+cp -rf $HOME/.config/{bspwm,kitty,polybar,sxhkd,vis,'gtk-3.0',pulse} $HOME/git-repos/DotFiles/  

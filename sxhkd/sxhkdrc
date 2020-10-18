@@ -7,8 +7,8 @@ super + Return
 	kitty
 
 # program launcher
-super + @space
-	dmenu_run
+super + slash
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -28,15 +28,7 @@ super + d
 
 # open file manager
 super + {_,shift +}o
-	{kitty -e ranger,thunar}
-
-# open Jetbrains Rider
-super + {_, shift +}c
-	{rider, /opt/intellij-idea-ultimate-edition/bin/idea.sh}
-
-# open godot engine
-super + e
-	godot-mono
+	{kitty -e ranger,nemo}
 
 # open gimp/aseprite
 super + {_,shift + }a
@@ -44,32 +36,36 @@ super + {_,shift + }a
 
 # open flameshot
 super + {_, shift +, ctrl +} s
-	flameshot {gui, full -c, full -p $HOME/Pictures}
+	flameshot {gui, full -c, full -p $HOME/My\ Stuff/Pictures}
 
 # open vim/libreoffice
 super + {_, shift +}v
 	{kitty -e vim, libreoffice}
 
-# open packettracer
-super + p
-	packettracer
-
 # open obs studio
 super + r
 	obs
 
-# set volume to 0
-# TODO try to toggle mute and unmute
-super + F1
-	pactl set-sink-volume @DEFAULT_SINK@ 0
+# mute volume
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # volume up 5%
-super + F3
+XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # volume down 5%
-super + F2
+XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# brightness up 5%
+XF86MonBrightnessUp
+	brightnessctl s +5%
+
+# brightness down 5%
+XF86MonBrightnessDown
+	brightnessctl s 5%-
+
 
 # logout/reboot/shutdown
 super + alt + {_, shift +, ctrl + }q

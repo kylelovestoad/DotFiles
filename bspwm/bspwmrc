@@ -19,12 +19,9 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a nm-connection-editor state=floating
+bspc rule -a flameshot state=floating
 
 wmname LG3D
 
-$HOME/.config/polybar/polylaunch.sh
-
-$HOME/bin/notify-package-updates.sh
-
-flameshot & optimus-manager-qt & nm-applet & blueman-applet &
+$HOME/.config/polybar/polylaunch.sh & $HOME/.fehbg & picom & 
+#$HOME/bin/notify-package-updates.sh &

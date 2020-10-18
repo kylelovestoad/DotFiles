@@ -12,6 +12,9 @@ alias rs='sudo !!'
 PS1='[\u@\h \W]\$ '
 
 export MSBuildSDKsPath=$( echo /usr/share/dotnet/sdk/3.1.107/Sdks );
+export EDITOR='vim'
+export VISUAL='vim'
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
