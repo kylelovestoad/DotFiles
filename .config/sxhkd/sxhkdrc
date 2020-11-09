@@ -35,16 +35,20 @@ super + {_,shift + }a
 	{gimp,aseprite}
 
 # open flameshot
-super + {_, shift +, ctrl +} s
-	flameshot {gui, full -c, full -p $HOME/My\ Stuff/Pictures}
+super + {_, shift +, ctrl +}s
+	flameshot {gui, full -c, full -p $HOME/Pictures}
 
-# open vim/libreoffice
+# open vim/gvim
 super + {_, shift +}v
-	{kitty -e vim, libreoffice}
+	{kitty -e vim, gvim}
 
 # open obs studio
 super + r
 	obs
+
+# open htop
+super + semicolon
+	kitty -e htop
 
 # mute volume
 XF86AudioMute
@@ -77,7 +81,7 @@ super + alt + {_, shift +, ctrl + }q
 #
 
 # close and kill
-{alt,super} + {_,shift + }F4
+alt + {_,shift + }F4
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout

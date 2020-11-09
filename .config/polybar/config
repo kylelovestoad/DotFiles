@@ -1,4 +1,4 @@
-;==========================================================
+;=========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -102,6 +102,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -210,7 +211,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -218,7 +219,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -426,10 +427,15 @@ menu-2-1-exec = menu-open-0
 type=custom/script
 exec=$HOME/.config/polybar/scripts/updates-pacman-aurhelper.sh
 
-format-prefix=    
+format-prefix=   
 format-prefix-foreground = ${colors.foreground-alt}
 
-interval = 600
+interval = 1000
+
+[module/notify-low-battery]
+type=custom/script
+exec=$HOME/.config/polybar/scripts/notify-low-battery.sh
+interval=90
 
 [settings]
 screenchange-reload = true

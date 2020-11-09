@@ -11,14 +11,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-
-# Environment variables 
-# Other environment variables are located at ~/.pam_environment
-
-export EDITOR='vim'
-export VISUAL='vim'
-
 # Keymap definitions
 
 backward-kill-word-alphanumeric () {
@@ -51,22 +43,22 @@ zle -N backward-word-alphanumeric
 bindkey '^H' backward-kill-word-alphanumeric
 bindkey '^[[3;5~' kill-word-alphanumeric
 
-
 bindkey "^[[1;5C" forward-word-alphanumeric
 bindkey "^[[1;5D" backward-word-alphanumeric
-
 
 # Aliases
 
 alias ls='ls --color=auto'
 alias rs='sudo $(fc -ln -1)'
 alias kitty='kitty --single-instance'
+alias yay='paru'
 
 powerline-daemon -q
 . /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
-
 # Other
+
+setopt extendedglob
 
 figlet -f slant "kylelovestoad"
 neofetch
