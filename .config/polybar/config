@@ -103,7 +103,6 @@ interval = 25
 
 mount-0 = /
 mount-1 = /home
-mount-2 = /media/windows
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -433,11 +432,10 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 interval = 1000
 
-;[module/notify-low-battery]
-;type=custom/script
-;exec=$HOME/.config/polybar/scripts/notify-low-battery.sh
-
-;interval=90
+[module/notify-low-battery]
+type=custom/script
+exec=$HOME/.config/polybar/scripts/notify-low-battery.sh
+interval=90
 
 [settings]
 screenchange-reload = true

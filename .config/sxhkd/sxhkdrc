@@ -7,8 +7,8 @@ super + Return
 	kitty
 
 # program launcher
-super + {_, shift +}slash
-	rofi -theme slate -show {drun,window}
+super + slash
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -28,7 +28,7 @@ super + d
 
 # open file manager
 super + {_,shift +}o
-	{kitty -e ranger,pcmanfm}
+	{kitty -e ranger,nemo}
 
 # open gimp/aseprite
 super + {_,shift + }a
@@ -39,8 +39,8 @@ super + {_, shift +, ctrl +}s
 	flameshot {gui, full -c, full -p $HOME/Pictures}
 
 # open vim/gvim
-super + v
-	{kitty -e nvim}
+super + {_, shift +}v
+	{kitty -e vim, gvim}
 
 # open obs studio
 super + r
@@ -99,12 +99,9 @@ super + m
 #
 # state/flags
 #
+
 super + {h,x,p,l}
 	bspc node -g {hidden, sticky, private, locked}
-
-# unhide most recent/all
-super + {shift,ctrl} + h
-	bspc node {$(bspc query -N -n .hidden.local | tail -n1),any.hidden} -g hidden=off
 
 # set the window state
 super + {t,shift + t,shift + f,f}
@@ -120,7 +117,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window.local
+	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + ctrl + {Left,Right}
@@ -129,10 +126,6 @@ super + ctrl + {Left,Right}
 # focus the next/previous desktop in the current monitor and send the current node to that desktop
 super + ctrl + shift + {Left,Right}
 	bspc node -d {prev,next}.local --follow
-
-# send all nodes on the desktop to the next/previous desktop
-super + ctrl + shift + alt + {Left,Right}
-	bspc node any.local -d {prev,next}.local --follow
 
 # focus the last node/desktop
 super + {grave,Tab}

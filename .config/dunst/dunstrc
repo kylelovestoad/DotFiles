@@ -61,7 +61,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 1
+    frame_width = 3
 
     # Defines color of the frame around the notification window.
     frame_color = "#14ffff"
@@ -301,9 +301,7 @@
 [urgency_normal]
     background = "#171a1c"
    #background = "#285577"
-   #foreground = "#ffffff"
-   #foreground = "#0dcdcd"
-    foreground = "#14ffff"
+    foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
@@ -378,8 +376,8 @@
 #        If the notification is already drawn, it won't get undrawn.
 # pushback: same as delay, but when switching into fullscreen, the notification will get
 #           withdrawn from screen again and will get delayed like a new notification
-[fullscreen_delay_everything]
-     fullscreen = delay
+#[fullscreen_delay_everything]
+#    fullscreen = delay
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
