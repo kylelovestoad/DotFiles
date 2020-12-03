@@ -1,4 +1,6 @@
 #!/bin/bash
 
-cp -rf $HOME/{.bashrc,.zshrc} $HOME/git-repos/DotFiles/
-cp -rf $HOME/.config/{bspwm,dunst,'gtk-3.0',kitty,picom,polybar,pulse,sxhkd,vis} $HOME/git-repos/DotFiles/.config/  
+REPO_HOME=$HOME/git-repos/DotFiles
+
+cp -rf $HOME/{.bashrc,.zshrc} $REPO_HOME
+cp -rf $HOME/.config/{bspwm,dunst,'gtk-3.0',kitty,nvim,picom,polybar,pulse,sxhkd,vis} $REPO_HOME/.config/  
